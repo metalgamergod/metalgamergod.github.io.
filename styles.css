@@ -1,0 +1,315 @@
+/* Deondrae Traylor Web110 04-26-2025 */
+/* This is the base style of all the pages */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* The Header and Navigation is here */
+header {
+  background-color: #5e5d5f;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #ff2a2a;
+}
+
+/* General page links layout */
+ul.page-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+ul.page-links li {
+  margin: 0;
+}
+
+/* This is the base button styling */
+ul.page-links a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* These are the specific button colors I have for all the pages*/
+ul.page-links a.persona5 {
+  background-color: #ff2a2a; /* Red for Persona 5 */
+}
+
+ul.page-links a.shadowhearts {
+  background-color: #7728a6; /* Purple for Shadow Hearts */
+}
+
+ul.page-links a.darkcloud2 {
+  background-color: #ffc107; /* Gold for Dark Cloud 2*/
+  color: #333; /* Darker text for better contrast */
+}
+
+/* Hover effects */
+ul.page-links a:hover,
+ul.page-links a:focus {
+  transform: translateY(-2px);
+}
+
+ul.page-links a.persona5:hover {
+  background-color: #cc0000;
+}
+
+ul.page-links a.shadowhearts:hover {
+  background-color: #5e35b1;
+}
+
+ul.page-links a.darkcloud2:hover {
+  background-color: #e0a800;
+}
+
+/* Active click effects */
+ul.page-links a:active {
+  transform: translateY(0);
+}
+
+
+
+
+/* This is the main content where all the sections and images are contained */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  background-color: #2a2a2a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 10px solid #ff2a2a;
+  
+}
+/* Main Header Title (h1 inside header) */
+body.persona5-page header h1 {
+  color: #ff2a2a; /* Red for Persona 5 */
+}
+
+body.shadowhearts-page header h1 {
+  color: #b388ff; /* Light purple for Shadow Hearts */
+}
+
+body.darkcloud2-page header h1 {
+  color: #ffc107; /* Gold for Dark Cloud 2 */
+}
+
+/* General Section Styling */
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Persona 5 sections */
+body.persona5-page section {
+  background-color: #2a2a2a;
+  border-left: 10px solid #ff2a2a; /* Red */
+}
+
+/* Shadow Hearts sections */
+body.shadowhearts-page section {
+  background-color: #3b2a58;
+  border-left: 10px solid #b388ff; /* Light purple */
+}
+
+/* Dark Cloud 2 sections */
+body.darkcloud2-page section {
+  background-color: #1e3f66;
+  border-left: 10px solid #ffc107; /* Golden yellow */
+}
+
+h2 {
+  color: #ff4444;
+}
+
+h3 {
+  color: #ffaa00;
+}
+
+/* Floated layout */
+.floated-section {
+  overflow: auto;
+}
+
+.float-left {
+  float: left;
+  width: 200px;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+/* a grid layout for the images */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.grid-layout article {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Characters Section */
+.char-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.character {
+  background-color: #333;
+  border-radius: 10px;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.character img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.character h3::before {
+  content: "🎭 ";
+  color: #ff4444;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* the responsive adjustments allow for the browser window to be changed without the text overflowing and not shrinking with the window */
+@media (max-width: 768px) {
+  nav ul.main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .float-left {
+    float: none;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+
+  .char-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+	img {
+  max-width: 700px;
+  width:100%;
+  height: auto;
+  display: block;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* These are all the default body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Persona 5 page - keep normal */
+body.persona5-page {
+  background-color: #ffffff; /* White background */
+  color: #000000;
+}
+
+body.persona5-page header {
+  background-color: #ff2a2a; /* Persona 5 Red for header */
+  color: #ffffff;
+}
+
+/* Shadow Hearts page */
+body.shadowhearts-page {
+  background-color: #4b2c7c; /* Dark purple body */
+  color: #f0e6ff;
+}
+
+body.shadowhearts-page header {
+  background-color: #7e57c2; /* Lighter purple header */
+  color: #ffffff;
+}
+
+/* Dark Cloud 2 page */
+body.darkcloud2-page {
+  background-color: #2980b9; /* Rich blue body */
+  color: #e0f7fa;
+}
+
+body.darkcloud2-page header {
+  background-color: #5dade2; /* Lighter blue header */
+  color: #ffffff;
+  
+}/* Section Titles (h2) */
+body.persona5-page h2 {
+  color: #ff4444; /* Slightly lighter red */
+}
+
+body.shadowhearts-page h2 {
+  color: #d1c4e9; /* Light lavender */
+}
+
+body.darkcloud2-page h2 {
+  color: #ffeb3b; /* Bright yellow */
+}
+
+/* General header styling */
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* General nav styling for the header */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}

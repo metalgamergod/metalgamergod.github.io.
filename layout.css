@@ -1,0 +1,30 @@
+/* Deondrae Traylor Web110 04-26-2025 */
+/* layout.css */
+header {
+  background-color: #ff0000;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav li a {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+nav li a:hover {
+  background-color: #fff;
+  color: #ff0000;
+  border-color: #ff0000;
+}
