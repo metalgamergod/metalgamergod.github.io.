@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Deondrae Traylor Web110 - Tutorial 7 & 9 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Video Game Feedback Form with JavaScript & Web Forms" />
+  <title>Feedback & Interaction</title>
+  <link rel="stylesheet" href="feedback.css" />
+
+  <script>
+    function showDateTime() {
+      const now = new Date();
+      document.getElementById('dateTime').textContent =
+        'Current Date & Time: ' + now.toLocaleString();
+    }
+
+    function greetUser() {
+      alert('Thank you for submitting your feedback!');
+    }
+
+    function countdown() {
+      let count = 5;
+      const timer = setInterval(() => {
+        document.getElementById('count').textContent = `Redirecting in ${count--} seconds...`;
+        if (count < 0) {
+          clearInterval(timer);
+          document.getElementById('count').textContent = 'Form submitted!';
+        }
+      }, 1000);
+    }
+
+    function convertAndMath() {
+      let value = document.getElementById("rating").value;
+      let number = parseFloat(value);
+      if (!isNaN(number)) {
+        alert("Your rating squared is: " + Math.pow(number, 2));
+      }
+    }
+  </script>
+</head>
+<body onload="showDateTime()">
+  <header>
+    <nav>
+      <ul class="page-links">
+        <li><a href="persona 5 index.html" class="persona5">Persona 5</a></li>
+        <li><a href="shadow hearts index.html" class="shadowhearts">Shadow Hearts</a></li>
+        <li><a href="dark cloud 2 index.html" class="darkcloud2">Dark Cloud 2</a></li>
+        <li><a href="game review index.html" class="formpage">Feedback Form</a></li>
+      </ul>
+    </nav>
+    <h1>Post Game Review</h1>
+    <p id="dateTime"></p>
+  </header>
+
+  <main>
+    <form onsubmit="greetUser(); countdown(); return false;">
+      <fieldset>
+        <legend>User Info</legend>
+        <label>Name: <input type="text" name="name" required maxlength="30" pattern="[A-Za-z\s]+" /></label><br />
+        <label>Email: <input type="email" name="email" required /></label><br />
+        <label>Date of Birth: <input type="date" name="dob" required /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Game Preferences</legend>
+        <label>Tell me your favorite character:<br />
+          <input type="radio" name="character" value="Joker" required /> Joker
+          <input type="radio" name="character" value="Ann" /> Ann
+          <input type="radio" name="character" value="Akechi" /> Akechi
+		  <input type="radio" name="character" value="Max" /> Max
+		  <input type="radio" name="character" value="Monica" /> Monica
+		  <input type="radio" name="character" value="Yuri" /> Yuri
+		  <input type="radio" name="character" value="Joachim" /> Joachim
+		  <input type="radio" name="character" value="Alice" /> Alice
+        </label>
+		
+		<label>What was your favorite game?<br />
+          <input type="radio" name="favorite-game" value="Shadow Hearts Covenant" required /> Shadow Hearts Covenant
+          <input type="radio" name="favorite-game" value="Dark Cloud 2" /> Dark Cloud 2
+          <input type="radio" name="favorite-game" value="Persona 5" /> Persona 5
+        </label><br /><br />
+
+        <label>Scale of 1 to 10): <input type="number" id="rating" name="rating" min="1" max="10" onblur="convertAndMath()" inputmode="numeric" /></label><br />
+        <label>How much did you enjoy the game?
+          <input type="range" name="hype" min="0" max="100"  />
+        </label><br />
+
+        <label>What systems do you play on?<br />
+          <input type="checkbox" name="platform" value="Playstation" /> Playstation
+          <input type="checkbox" name="platform" value="Xbox" /> Xbox
+          <input type="checkbox" name="platform" value="PC" /> PC
+		  <input type="checkbox" name="platform" value="Nintendo" /> Nintendo
+		  
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras</legend>
+        <label>Where did you hear about these games?<br />
+          <select name="source">
+            <option value="friend">Friend or Family</option>
+            <option value="web">Web Search and Wiki style sites</option>
+            <option value="streaming">Twitch/YouTube</option>
+          </select>
+        </label><br />
+
+        <label>What is your favorite song from these three games?:
+          <select name="songs">
+            <option value="Old Smudged Map">Old Smudged Map</option>
+			<option value="Astaroth ~ Battle with The Fallen Angel" >Astaroth ~ Battle with The Fallen Angel</option>
+            <option value="Ruler of Darkness, Emperor Griffon" >Ruler of Darkness, Emperor Griffon</option>
+			<option value="Dark Element">Dark Element</option>			
+            <option value="Wake Up, Get Up, Get Out There">Wake Up, Get Up, Get Out There</option>
+			<option value="Rivers in the Desert">Rivers in the Desert</option>
+			</select>
+        </label><br />
+
+        <label>Any comments?<br />
+          <textarea name="comments" rows="4" cols="40"></textarea>
+        </label>
+      </fieldset>
+
+      <input type="submit" value="Submit Feedback" />
+      <input type="reset" value="Reset Form" />
+    </form>
+
+    <p id="count"></p>
+  </main>
+  
+
+  <footer>
+    <p>&copy; 2025 Project of a Proud Gamer | Web110 Assignment</p>
+  </footer>
+</body>
+</html>
