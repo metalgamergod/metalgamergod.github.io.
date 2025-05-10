@@ -1,0 +1,165 @@
+/* This CSS is specifically for the review page so that the rest of the content for the other pages are not affected */
+
+/* General page links layout */
+ul.page-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+ul.page-links li {
+  margin: 0;
+}
+
+/* This is the base button styling */
+ul.page-links a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* These are the specific button colors I have for all the pages*/
+ul.page-links a.persona5 {
+  background-color: #ff2a2a; /* Red for Persona 5 */
+}
+
+ul.page-links a.shadowhearts {
+  background-color: #7728a6; /* Purple for Shadow Hearts */
+}
+
+ul.page-links a.darkcloud2 {
+  background-color: #ffc107; /* Gold for Dark Cloud 2*/
+  color: #333; /* Darker text for better contrast */
+  
+}
+ul.page-links a.formpage {
+  background-color: #20d5bf; /* Teal is used for the Game review form page with purple accents*/
+  color: #333; /* Darker text for better contrast */
+  
+}
+/* Hover effects */
+ul.page-links a:hover,
+ul.page-links a:focus {
+  transform: translateY(-2px);
+}
+
+ul.page-links a.persona5:hover {
+  background-color: #cc0000;
+}
+
+ul.page-links a.shadowhearts:hover {
+  background-color: #5e35b1;
+}
+
+ul.page-links a.darkcloud2:hover {
+  background-color: #e0a800;
+}
+
+/* Active click effects */
+ul.page-links a:active {
+  transform: translateY(0);
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  background-color: #05c4af;
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  background-color: 05c4af;
+}
+
+#dateTime {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+
+body {
+  background-color:#038778;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #be88f2;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+fieldset {
+  background-color: #038778;
+  border: 1px solid #555;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+legend {
+  background-color: #a465e0;
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 2px solid #3e9444;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select,
+textarea {
+  background-color: #639eed;
+  color: #fff;
+  border: 1px solid #666;
+  padding: 0.5em;
+  border-radius: 4px;
+  margin-top: 0.5em;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #16a5e7;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #45a049;
+}

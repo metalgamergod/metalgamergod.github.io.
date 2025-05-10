@@ -60,8 +60,13 @@ ul.page-links a.shadowhearts {
 ul.page-links a.darkcloud2 {
   background-color: #ffc107; /* Gold for Dark Cloud 2*/
   color: #333; /* Darker text for better contrast */
+  
 }
-
+ul.page-links a.formpage {
+  background-color: #20d5bf; /* Green is used for the Game review form page*/
+  color: #333; /* Darker text for better contrast */
+  
+}
 /* Hover effects */
 ul.page-links a:hover,
 ul.page-links a:focus {
@@ -275,8 +280,9 @@ body.darkcloud2-page {
 body.darkcloud2-page header {
   background-color: #5dade2; /* Lighter blue header */
   color: #ffffff;
-  
-}/* Section Titles (h2) */
+}
+
+/* Section Titles (h2) */
 body.persona5-page h2 {
   color: #ff4444; /* Slightly lighter red */
 }
